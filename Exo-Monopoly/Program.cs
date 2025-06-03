@@ -1,4 +1,5 @@
 ﻿using Exo_Monopoly.Enums;
+using Exo_Monopoly.Models;
 
 namespace Exo_Monopoly
 {
@@ -6,6 +7,9 @@ namespace Exo_Monopoly
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Joueur, veuillez indiquer votre nom :");
+            string userName = Console.ReadLine();
+
             Console.WriteLine("Veuillez choisir un pion :");
             string[] pionNames = Enum.GetNames<Pions>();
             //Pions[] pions = Enum.GetValues<Pions>();
@@ -17,6 +21,19 @@ namespace Exo_Monopoly
             Console.WriteLine("Quel pion choisissez-vous?");
             string userInput = Console.ReadLine();
             Pions choice = Enum.Parse<Pions>(userInput);
+
+            Joueur j1 = new Joueur() { 
+                nom = userName,
+                pion = choice
+            };
+
+            Console.WriteLine($"Le joueur {j1.nom} avec le pion {j1.pion} se trouve à la case {j1.position}.");
+            bool isDouble = j1.Avancer();
+            if (isDouble)
+            {
+                Console.WriteLine("Super! Un double!");
+            }
+            Console.WriteLine($"Le joueur {j1.nom} avec le pion {j1.pion} se trouve à la case {j1.position}.");
 
 
         }
