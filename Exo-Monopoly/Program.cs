@@ -23,19 +23,19 @@ namespace Exo_Monopoly
             Pions choice = Enum.Parse<Pions>(userInput);
 
             Joueur j1 = new Joueur() { 
-                nom = userName,
-                pion = choice
+                Nom = userName,
+                Pion = choice
             };
 
-            Console.WriteLine($"Le joueur {j1.nom} avec le pion {j1.pion} se trouve à la case {j1.position}.");
+            Console.WriteLine($"Le joueur {j1.Nom} avec le pion {j1.Pion} se trouve à la case {j1.Position}.");
             bool isDouble = j1.Avancer();
             if (isDouble)
             {
                 Console.WriteLine("Super! Un double!");
             }
-            Console.WriteLine($"Le joueur {j1.nom} avec le pion {j1.pion} se trouve à la case {j1.position}.");
+            Console.WriteLine($"Le joueur {j1.Nom} avec le pion {j1.Pion} se trouve à la case {j1.Position}.");
 
-
+            
         }
     }
 }
