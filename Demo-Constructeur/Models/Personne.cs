@@ -92,6 +92,11 @@ namespace Demo_Constructeur.Models
             
             Prenom = prenom; 
         }
-         
+
+        public Personne(string Nom="Bernie", string prenom="Alfons")
+        
+        {
+            
+        }
     }
 }

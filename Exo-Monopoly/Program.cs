@@ -7,6 +7,7 @@ namespace Exo_Monopoly
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Joueur, veuillez indiquer votre nom :");
             string userName = Console.ReadLine();
 
@@ -21,11 +22,13 @@ namespace Exo_Monopoly
             Console.WriteLine("Quel pion choisissez-vous?");
             string userInput = Console.ReadLine();
             Pions choice = Enum.Parse<Pions>(userInput);
-
-            Joueur j1 = new Joueur() { 
-                Nom = userName,
-                Pion = choice
-            };
+             
+                Joueur j1 = new Joueur
+                (
+                     userName,
+                     choice
+                );
+             
 
             Console.WriteLine($"Le joueur {j1.Nom} avec le pion {j1.Pion} se trouve à la case {j1.Position}.");
             bool isDouble = j1.Avancer();
@@ -35,7 +38,10 @@ namespace Exo_Monopoly
             }
             Console.WriteLine($"Le joueur {j1.Nom} avec le pion {j1.Pion} se trouve à la case {j1.Position}.");
 
-            
+
+
+
+
         }
     }
 }
