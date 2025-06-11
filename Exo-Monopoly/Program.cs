@@ -38,9 +38,18 @@ namespace Exo_Monopoly
             }
             Console.WriteLine($"Le joueur {j1.Nom} avec le pion {j1.Pion} se trouve à la case {j1.Position}.");
 
+            CasePropriete[] cases = 
+            {
+                new CasePropriete("Patio", Couleurs.BleuCiel, 20),
+                new CasePropriete("Accueil", Couleurs.BleuCiel, 23),
+                new CasePropriete("Bureau Sonia", Couleurs.Marron, 26),
+                new CasePropriete("Bureau Nicole", Couleurs.Marron, 26),
+                new CasePropriete("Bureau Laure", Couleurs.Marron, 30)
+            };
 
+            Jeu monopoly = new Jeu(cases);
 
-
+            Console.WriteLine($"Votre plateau compte {monopoly.Plateau.Length} cases.");
 
         }
     }
