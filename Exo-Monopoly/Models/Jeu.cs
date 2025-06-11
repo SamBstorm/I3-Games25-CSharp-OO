@@ -54,8 +54,22 @@ namespace Exo_Monopoly.Models
 
         public Jeu(CasePropriete[] casesPlateau)
         {
+            //_plateau = [.. casesPlateau]; //Initialise une list à partir d'un array
             _plateau = new List<CasePropriete>(casesPlateau);
             _joueurs = new List<Joueur>();
+        }
+
+        public void AjouterJoueur(string nom, Pions pion)
+        {
+            foreach (Joueur j in _joueurs)
+            {
+                if(j.Pion == pion)
+                {
+                    Console.WriteLine($"Le pion {pion} est déjà pris.");
+                    return;
+                }
+            }
+            _joueurs.Add(new Joueur(nom, pion));
         }
     }
 }
