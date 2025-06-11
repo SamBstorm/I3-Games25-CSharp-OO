@@ -31,7 +31,7 @@ namespace Exo_Monopoly
 
             int nbJoueurs;
             do Console.WriteLine("Combien joueurs jouent ? (entre 2 et 6)");
-            while (!int.TryParse(Console.ReadLine(),out nbJoueurs) || nbJoueurs < 2 || nbJoueurs > 6);
+            while (!int.TryParse(Console.ReadLine(), out nbJoueurs) || nbJoueurs < 2 || nbJoueurs > 6);
 
             do
             {
@@ -50,11 +50,11 @@ namespace Exo_Monopoly
                 string userInput = Console.ReadLine();
                 Pions choice = Enum.Parse<Pions>(userInput);
 
-                monopoly.AjouterJoueur(userName, choice); 
+                monopoly.AjouterJoueur(userName, choice);
             } while (monopoly.Joueurs.Length < nbJoueurs);
 
             int tourJoueur = 0;
-            while(tourJoueur < 40)
+            while (tourJoueur < 40)
             {
                 Joueur joueurCourrant = monopoly.Joueurs[tourJoueur % monopoly.Joueurs.Length];
                 CasePropriete caseCourrante = monopoly[joueurCourrant.Position];
@@ -76,9 +76,9 @@ namespace Exo_Monopoly
 
                 tourJoueur++;
             }
-            
 
-            
+
+
 
         }
     }

@@ -110,5 +110,18 @@ namespace Exo_Monopoly.Models
             }
 
         }
+
+        public static Joueur operator + (Joueur left, int right)
+        {
+            left.EtrePaye(right);
+            return left;
+        }
+
+        public static List<CasePropriete> operator +(Joueur left, CasePropriete right)
+        {
+            right.Acheter(left);
+            left.AjouterPropriete(right);
+            return left.Proprietes;
+        } 
     }
 }
