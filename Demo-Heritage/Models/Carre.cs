@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo_Heritage.Models
 {
-    internal class Carre : Rectangle
+    internal sealed class Carre : Rectangle
     {
         public Carre(string color, int borderWidth, int cote) : base(color, borderWidth, cote, cote)
         {
