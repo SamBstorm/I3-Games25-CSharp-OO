@@ -62,13 +62,17 @@ namespace Exo_Monopoly
                 //Traitement du tour
                 Console.WriteLine($"Le joueur {joueurCourrant.Nom} avec le pion {joueurCourrant.Pion} se trouve à la case {caseCourrante.Nom}.");
                 bool isDouble = joueurCourrant.Avancer();
+                caseCourrante.RetirerVisiteur(joueurCourrant);
                 caseCourrante = monopoly[joueurCourrant.Position];
+                caseCourrante.AjouterVisiteur(joueurCourrant);
                 while (isDouble)
                 {
                     Console.WriteLine("Super! Un double!");
                     Console.WriteLine($"Le joueur {joueurCourrant.Nom} avec le pion {joueurCourrant.Pion} se trouve à la case {caseCourrante.Nom}.");
                     isDouble = joueurCourrant.Avancer();
+                    caseCourrante.RetirerVisiteur(joueurCourrant);
                     caseCourrante = monopoly[joueurCourrant.Position];
+                    caseCourrante.AjouterVisiteur(joueurCourrant);
                 }
                 Console.WriteLine($"Le joueur {joueurCourrant.Nom} avec le pion {joueurCourrant.Pion} se trouve à la case {caseCourrante.Nom}.");
 
