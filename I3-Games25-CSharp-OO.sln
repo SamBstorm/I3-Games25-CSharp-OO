@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Indexeur", "Demo-Index
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Heritage", "Demo-Heritage\Demo-Heritage.csproj", "{17BD736A-CB7C-4CA0-8020-0B659A4ACFF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-PolyMorphisme", "Demo-PolyMorphisme\Demo-PolyMorphisme.csproj", "{0FE9F4CD-48D1-4CE4-8B62-A7E4C2472756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{17BD736A-CB7C-4CA0-8020-0B659A4ACFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17BD736A-CB7C-4CA0-8020-0B659A4ACFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17BD736A-CB7C-4CA0-8020-0B659A4ACFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE9F4CD-48D1-4CE4-8B62-A7E4C2472756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE9F4CD-48D1-4CE4-8B62-A7E4C2472756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE9F4CD-48D1-4CE4-8B62-A7E4C2472756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE9F4CD-48D1-4CE4-8B62-A7E4C2472756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{E14742F6-1689-4BB7-9B0B-E553B3BEEFB0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{F6D875AA-B29B-41D9-824F-6BA8DC5430C0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{17BD736A-CB7C-4CA0-8020-0B659A4ACFF0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0FE9F4CD-48D1-4CE4-8B62-A7E4C2472756} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF0C2336-42DD-4D5C-89E8-038E348AEFE7}
