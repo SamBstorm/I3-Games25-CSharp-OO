@@ -10,7 +10,7 @@ namespace Exo_Monopoly.Models
     internal class Jeu
     {
         private List<Joueur> _joueurs;
-        private List<CasePropriete> _plateau;
+        private List<Case> _plateau;
 
         public Joueur[] Joueurs
         {
@@ -23,7 +23,7 @@ namespace Exo_Monopoly.Models
                 _joueurs = new List<Joueur>(value);
             }*/
         }
-        public CasePropriete[] Plateau
+        public Case[] Plateau
         {
             get
             {
@@ -31,7 +31,7 @@ namespace Exo_Monopoly.Models
             }
         }
 
-        public CasePropriete this[int numeroCase]
+        public Case this[int numeroCase]
         {
             get
             {
@@ -52,10 +52,10 @@ namespace Exo_Monopoly.Models
             }
         }
 
-        public Jeu(CasePropriete[] casesPlateau)
+        public Jeu(Case[] casesPlateau)
         {
             //_plateau = [.. casesPlateau]; //Initialise une list à partir d'un array
-            _plateau = new List<CasePropriete>(casesPlateau);
+            _plateau = new List<Case>(casesPlateau);
             _joueurs = new List<Joueur>();
         }
 

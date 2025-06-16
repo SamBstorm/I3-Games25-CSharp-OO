@@ -7,19 +7,22 @@ namespace Exo_Monopoly
     {
         static void Main(string[] args)
         {
-            CasePropriete[] cases =
+            Case[] cases =
             {
+                new Case("Case départ"),
                 new CasePropriete("Patio", Couleurs.Marron, 20),
                 new CasePropriete("Accueil", Couleurs.Marron, 23),
                 new CasePropriete("Ascenceur Gauche", Couleurs.BleuCiel, 26),
                 new CasePropriete("Ascenceur Droit", Couleurs.BleuCiel, 26),
                 new CasePropriete("Toilette RDC", Couleurs.BleuCiel, 30),
+                new Case("Prison"),
                 new CasePropriete("Couloir 4ième étage", Couleurs.Violet, 32),
                 new CasePropriete("Couloir 5ième étage", Couleurs.Violet, 32),
                 new CasePropriete("Toilette 5ième étage", Couleurs.Violet, 38),
                 new CasePropriete("Classe des WAD", Couleurs.Orange, 42),
                 new CasePropriete("Classe des WEB", Couleurs.Orange, 42),
                 new CasePropriete("Classe des Games", Couleurs.Orange, 48),
+                new Case("Parc gratuit"),
                 new CasePropriete("Bureau Sonia", Couleurs.Bleu, 56),
                 new CasePropriete("Bureau Nicole", Couleurs.Bleu, 56),
                 new CasePropriete("Bureau Laure", Couleurs.Bleu, 60)
@@ -57,10 +60,16 @@ namespace Exo_Monopoly
             while (tourJoueur < 40)
             {
                 Joueur joueurCourrant = monopoly.Joueurs[tourJoueur % monopoly.Joueurs.Length];
-                CasePropriete caseCourrante = monopoly[joueurCourrant.Position];
+                Case caseCourrante = monopoly[joueurCourrant.Position];
 
                 //Traitement du tour
                 Console.WriteLine($"Le joueur {joueurCourrant.Nom} avec le pion {joueurCourrant.Pion} se trouve à la case {caseCourrante.Nom}.");
+                CasePropriete caseProp;
+                if (caseCourrante is CasePropriete)
+                {
+                    caseProp = (CasePropriete)caseCourrante;
+                    Console.WriteLine($"C'est une propriété, appatenant à {((caseProp.Proprietaire is null)? "personne" : $"{caseProp.Proprietaire.Nom} ({caseProp.Proprietaire.Pion})") }.");
+                }
                 bool isDouble = joueurCourrant.Avancer();
                 caseCourrante.RetirerVisiteur(joueurCourrant);
                 caseCourrante = monopoly[joueurCourrant.Position];
@@ -69,13 +78,22 @@ namespace Exo_Monopoly
                 {
                     Console.WriteLine("Super! Un double!");
                     Console.WriteLine($"Le joueur {joueurCourrant.Nom} avec le pion {joueurCourrant.Pion} se trouve à la case {caseCourrante.Nom}.");
+                    if (caseCourrante is CasePropriete)
+                    {
+                        caseProp = (CasePropriete)caseCourrante;
+                        Console.WriteLine($"C'est une propriété, appatenant à {((caseProp.Proprietaire is null) ? "personne" : $"{caseProp.Proprietaire.Nom} ({caseProp.Proprietaire.Pion})")}.");
+                    }
                     isDouble = joueurCourrant.Avancer();
                     caseCourrante.RetirerVisiteur(joueurCourrant);
                     caseCourrante = monopoly[joueurCourrant.Position];
                     caseCourrante.AjouterVisiteur(joueurCourrant);
                 }
                 Console.WriteLine($"Le joueur {joueurCourrant.Nom} avec le pion {joueurCourrant.Pion} se trouve à la case {caseCourrante.Nom}.");
-
+                if (caseCourrante is CasePropriete)
+                {
+                    caseProp = (CasePropriete)caseCourrante;
+                    Console.WriteLine($"C'est une propriété, appatenant à {((caseProp.Proprietaire is null) ? "personne" : $"{caseProp.Proprietaire.Nom} ({caseProp.Proprietaire.Pion})")}.");
+                }
                 //Fin traitement
 
                 tourJoueur++;
