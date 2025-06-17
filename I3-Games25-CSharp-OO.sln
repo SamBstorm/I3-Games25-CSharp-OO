@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-VirtualOverride", "Dem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Abstract", "Demo-Abstract\Demo-Abstract.csproj", "{21C30B21-137C-45E1-A0CC-F4802890BD22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_Interface_Exception_Delegue", "Demo_Interface_Exception_Delegue\Demo_Interface_Exception_Delegue.csproj", "{995ECD69-7261-41B6-A81E-090A7AAF0F97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{21C30B21-137C-45E1-A0CC-F4802890BD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21C30B21-137C-45E1-A0CC-F4802890BD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21C30B21-137C-45E1-A0CC-F4802890BD22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995ECD69-7261-41B6-A81E-090A7AAF0F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995ECD69-7261-41B6-A81E-090A7AAF0F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995ECD69-7261-41B6-A81E-090A7AAF0F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995ECD69-7261-41B6-A81E-090A7AAF0F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +115,7 @@ Global
 		{0FE9F4CD-48D1-4CE4-8B62-A7E4C2472756} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{323F4C9B-4FB8-44CD-8F7E-7B08E9A5877B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{21C30B21-137C-45E1-A0CC-F4802890BD22} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{995ECD69-7261-41B6-A81E-090A7AAF0F97} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF0C2336-42DD-4D5C-89E8-038E348AEFE7}

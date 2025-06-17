@@ -63,7 +63,7 @@ namespace Exo_Monopoly.Models
             Proprietaire= null;
         }
 
-        public void Acheter(Joueur acheteur)
+        private void Acheter(Joueur acheteur)
         { 
            //if(acheteur.Payer(Prix))
            // {
@@ -82,6 +82,29 @@ namespace Exo_Monopoly.Models
                     Proprietaire = acheteur;
                 }
             }
+        }
+
+        public override void Activer(Joueur visiteur)
+        {
+            if (Proprietaire is null)
+            {
+                //Je dois l'acheter
+                //Si j'ai l'argent
+                if(visiteur.Solde>= Prix)
+                {
+                    Acheter(visiteur);
+                }
+            }
+            else if(Proprietaire != visiteur)
+            {
+                Sejourner(visiteur);   
+            }
+        }
+
+        private void Sejourner(Joueur visiteur)
+        {
+            int droitSejour = Prix / 4;
+            visiteur.Payer(droitSejour);
         }
     }
 }

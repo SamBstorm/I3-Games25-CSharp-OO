@@ -117,11 +117,11 @@ namespace Exo_Monopoly.Models
             return left;
         }
 
-        public static List<CasePropriete> operator +(Joueur left, CasePropriete right)
-        {
-            right.Acheter(left);
-            left.AjouterPropriete(right);
-            return left.Proprietes;
-        } 
+        //public static List<CasePropriete> operator +(Joueur left, CasePropriete right)
+        //{
+        //    right.Activer(left);
+        //    left.AjouterPropriete(right);
+        //    return left.Proprietes;
+        //} 
     }
 }

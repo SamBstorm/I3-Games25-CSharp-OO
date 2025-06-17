@@ -9,20 +9,20 @@ namespace Exo_Monopoly
         {
             Case[] cases =
             {
-                new Case("Case départ"),
+                //new Case("Case départ"),
                 new CasePropriete("Patio", Couleurs.Marron, 20),
                 new CasePropriete("Accueil", Couleurs.Marron, 23),
                 new CasePropriete("Ascenceur Gauche", Couleurs.BleuCiel, 26),
                 new CasePropriete("Ascenceur Droit", Couleurs.BleuCiel, 26),
                 new CasePropriete("Toilette RDC", Couleurs.BleuCiel, 30),
-                new Case("Prison"),
+                //new Case("Prison"),
                 new CasePropriete("Couloir 4ième étage", Couleurs.Violet, 32),
                 new CasePropriete("Couloir 5ième étage", Couleurs.Violet, 32),
                 new CasePropriete("Toilette 5ième étage", Couleurs.Violet, 38),
                 new CasePropriete("Classe des WAD", Couleurs.Orange, 42),
                 new CasePropriete("Classe des WEB", Couleurs.Orange, 42),
                 new CasePropriete("Classe des Games", Couleurs.Orange, 48),
-                new Case("Parc gratuit"),
+                //new Case("Parc gratuit"),
                 new CasePropriete("Bureau Sonia", Couleurs.Bleu, 56),
                 new CasePropriete("Bureau Nicole", Couleurs.Bleu, 56),
                 new CasePropriete("Bureau Laure", Couleurs.Bleu, 60)
