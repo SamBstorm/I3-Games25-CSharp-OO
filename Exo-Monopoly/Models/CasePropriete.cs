@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Exo_Monopoly.Models
 {
-    internal class CasePropriete
+    internal class CasePropriete : Case
     {
         #region Variables et propriétés
-        //Nom(string) – Lecture seule
-        public string Nom { get; private set; }
         //Couleur(Couleurs) – Lecture seule
         public Couleurs Couleur { get; }
 
@@ -57,9 +55,8 @@ namespace Exo_Monopoly.Models
         } 
         #endregion
 
-        public CasePropriete(string nom, Couleurs couleur, int prix)
+        public CasePropriete(string nom, Couleurs couleur, int prix) : base(nom)
         {
-            Nom = nom;
             Couleur = couleur;
             Prix=prix;
             _estHypotequee = false;
