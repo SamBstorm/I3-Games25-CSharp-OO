@@ -13,6 +13,16 @@ Position emplacementDeMaPoule = Lava.Avancer(4, DIRECTION.Avant);
 //Affichage de la poule
 Console.WriteLine($"Ma poule se trouve désormais à l'emplacement x:{emplacementDeMaPoule.x} - y:{emplacementDeMaPoule.y}");
 
+//On fait un petit renard
+Renard Goupil = new Renard("Ysengrin");
+//La poule est attentive au cri du renard
+Goupil.ECrie += Lava.FuitPauvrePoule;
+
+Goupil.VoitLapoule();
+
+
+
+
 //On plante tout!!!
 DIRECTION Fausse =(DIRECTION)456;
 try

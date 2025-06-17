@@ -16,5 +16,11 @@ namespace Demo_Interface_Exception_Delegue.Models
         {
             
         }
+
+        public void FuitPauvrePoule(string lecri)
+        {
+            Console.WriteLine($"Le renard dit : {lecri}");
+            Avancer(2, DIRECTION.Arriere);
+        }
     }
 }
